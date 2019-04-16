@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 from wxpy import *
+from term import *
 import time
 
 
@@ -8,32 +9,32 @@ import time
 """
 class Tutor:
 	def __init__(self):
-		pass
+		self.delay = 2	# 2秒延时
 
 
 	# 主函数
 	def main(self):
 		print "\n============================"
 		print u"回复数字实现对应功能："
-		print u"1.获取所有群"
-		print u"2.开始启动"
-		print u"3.停止系统"
-		print u"4.退出系统"
-		print u"5.登录"
+		print u"1.登录"
+		print u"2.获取所有群"
+		print u"3.开始启动"
+		print u"4.停止系统"
+		print u"5.退出系统"
 		print "============================"
 		itext = "请输入数字："
 		ifunc = input(itext.decode("UTF-8").encode("GBK"))
 		
 		if ifunc == 1:
-			self.get_all_group()
-		elif ifunc == 2:
-			self.start()
-		elif ifunc == 3:
-			self.stop()
-		elif ifunc == 4:
-			self.exit()
-		elif ifunc == 5:
 			self.login()
+		elif ifunc == 2:
+			self.get_all_group()
+		elif ifunc == 3:
+			self.start()
+		elif ifunc == 4:
+			self.stop()
+		elif ifunc == 5:
+			self.exit()
 		else:
 			print u"输入错误请重新输入"
 			self.main()
@@ -47,6 +48,107 @@ class Tutor:
 				cache_path=None, console_qr=False, qr_path=path
 			)
 		print u"登录成功!"
+
+		# 监听群信息
+		@self.bot.register(Group)
+		def reply_msg(msg):
+			if (msg.text == bot4._1):
+				time.sleep(2)
+				msg.reply(tutor._2)
+			elif (msg.text == bot4._2):
+				time.sleep(5)
+				msg.reply(tutor._3)
+			elif (msg.text == bot2._4):
+				time.sleep(2)
+				msg.reply(tutor._4)
+			elif (msg.text == bot1._2):
+				time.sleep(3)
+				msg.reply(tutor._5)
+			elif (msg.text == bot1._3):
+				time.sleep(10)
+				msg.reply(tutor._6)
+			elif (msg.text == bot2._5):
+				time.sleep(2)
+				msg.reply(tutor._7)
+				time.sleep(4)
+				msg.reply(tutor._8)
+			elif (msg.text == bot2._6):
+				time.sleep(3)
+				msg.reply(tutor._9)
+			elif (msg.text == bot1._5):
+				time.sleep(3)
+				msg.reply(tutor._10)
+				time.sleep(5)
+				msg.reply(tutor._11)
+			elif (msg.text == bot3._3):
+				time.sleep(5)
+				msg.reply(tutor._12)
+			elif (msg.text == bot3._4):
+				time.sleep(8)
+				msg.reply(tutor._13)
+			elif (msg.text == bot3._5):
+				time.sleep(5)
+				msg.reply(tutor._14)
+			elif (msg.text == bot4._5):
+				time.sleep(5)
+				msg.reply(tutor._15)
+			elif (msg.text == bot2._9):
+				time.sleep(10)
+				msg.reply(tutor._16)
+			elif (msg.text == bot4._6):
+				time.sleep(2)
+				msg.reply(tutor._17)
+			elif (msg.text == bot4._7):
+				time.sleep(2)
+				msg.reply(tutor._18)
+			elif (msg.text == bot1._8):
+				time.sleep(2)
+				msg.reply(tutor._19)
+			elif (msg.text == bot2._10):
+				time.sleep(6)
+				msg.reply(tutor._20)
+			elif (msg.text == bot2._11):
+				time.sleep(1)
+				msg.reply(tutor._21)
+				time.sleep(1.5)
+				msg.reply(tutor._22)
+			elif (msg.text == bot1._9):
+				time.sleep(3)
+				msg.reply(tutor._23)
+				time.sleep(1)
+				msg.reply(tutor._24)
+			elif (msg.text == bot3._10):
+				time.sleep(3)
+				msg.reply(tutor._25)
+			elif (msg.text == bot1._10):
+				time.sleep(1.5)
+				msg.reply(tutor._26)
+				time.sleep(2)
+				msg.reply(tutor._27)
+			elif (msg.text == bot1._11):
+				time.sleep(1)
+				msg.reply(tutor._28)
+			elif (msg.text == bot4._10):
+				time.sleep(2)
+				msg.reply(tutor._29)
+			elif (msg.text == bot2._15):
+				time.sleep(2)
+				msg.reply(tutor._30)
+				time.sleep(6)
+				msg.reply(tutor._31)
+			elif (msg.text == bot2._16):
+				time.sleep(2)
+				msg.reply(tutor._32)
+			elif (msg.text == bot5._5):
+				time.sleep(8)
+				msg.reply(tutor._33)
+			elif (msg.text == bot3._13):
+				time.sleep(8)
+				msg.reply(tutor._34)
+			elif (msg.text == bot4._15):
+				time.sleep(3)
+				msg.reply(tutor._35)
+		
 		self.main()
 
 
@@ -96,8 +198,8 @@ class Tutor:
 		for li in groups:
 			# 搜索聊天对象
 			mygroup = self.bot.groups().search(li)
-			mygroup[0].send('Hello')
-			print mygroup[0] + u"发送成功！"
+			mygroup[0].send(tutor._1)
+			print li + u"发送成功！"
 			time.sleep(0.5)
 		self.main()
 
@@ -115,6 +217,13 @@ class Tutor:
 		print u"退出系统成功"
 
 
-# 开启
-bot = Tutor()
+tutor = TermTutor()
+bot1  = Bot1()	# 甲
+bot2  = Bot2()
+bot3  = Bot3()
+bot4  = Bot4()
+bot5  = Bot5()
+bot6  = Bot6()
+
+bot = Tutor()	# 开启
 bot.main()
