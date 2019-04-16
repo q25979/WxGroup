@@ -5,9 +5,9 @@ import time
 
 
 """
-甲 机器人
+丙 机器人
 """
-class Bot_1:
+class Bot_3:
 	def __init__(self):
 		self.delay = 3
 
@@ -117,5 +117,5 @@ bot4  = Bot4()
 bot5  = Bot5()
 bot6  = Bot6()
 
-bot = Bot_1()	# 开启
+bot = Bot_3()	# 开启
 bot.main()
