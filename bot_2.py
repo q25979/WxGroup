@@ -12,8 +12,8 @@ class Bot_2:
 		self.delay = 16
 		self.imgpath = "./img/qrcode.jpg"
 		self.imgtz = "./img/_2tz.jpg"
-		self.imgyl = "./img/_2yl.jpg"
-		self.imgyl2 = "./img/_2yl2.jpg"
+		self.imgyl = "./img/_2yl2.jpg"
+		self.imgyl2 = "./img/_2yl3.jpg"
 
 
 	# 主函数
@@ -120,8 +120,6 @@ class Bot_2:
 				msg.reply(bot2._23)
 			elif (msg.text == bot6._2):
 				time.sleep(self.delay)
-				msg.reply_image(self.imgtz)	#  投注截图
-				time.sleep(3)
 				msg.reply(bot2._24)
 			elif (msg.text == bot3._19):
 				time.sleep(self.delay)
