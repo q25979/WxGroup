@@ -15,6 +15,7 @@ class Tutor:
 	# 主函数
 	def main(self):
 		print "\n============================"
+		print u"身份：导师"
 		print u"回复数字实现对应功能："
 		print u"1.登录"
 		print u"2.获取所有群"

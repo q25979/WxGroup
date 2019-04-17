@@ -15,6 +15,7 @@ class Bot_2:
 	# 主函数
 	def main(self):
 		print "\n============================"
+		print u"身份：机器人 乙"
 		print u"回复数字实现对应功能："
 		print u"1.登录"
 		print u"2.停止系统"
@@ -34,7 +35,7 @@ class Bot_2:
 	# 登录微信
 	def login(self):
 		print u"正在下载二维码，请等待..."
-		path = "bot1.png"
+		path = "bot2.png"
 		self.bot = Bot(
 				cache_path=None, console_qr=False, qr_path=path
 			)

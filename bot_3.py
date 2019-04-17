@@ -15,6 +15,7 @@ class Bot_3:
 	# 主函数
 	def main(self):
 		print "\n============================"
+		print u"身份：机器人 丙"
 		print u"回复数字实现对应功能："
 		print u"1.登录"
 		print u"2.停止系统"
@@ -34,7 +35,7 @@ class Bot_3:
 	# 登录微信
 	def login(self):
 		print u"正在下载二维码，请等待..."
-		path = "bot1.png"
+		path = "bot3.png"
 		self.bot = Bot(
 				cache_path=None, console_qr=False, qr_path=path
 			)
@@ -43,51 +44,68 @@ class Bot_3:
 		# 监听群信息
 		@self.bot.register(Group)
 		def reply_msg(msg):
-			if (msg.text == tutor._1):
+			if (msg.text == bot2._1):
 				time.sleep(self.delay)
-				msg.reply(bot1._1)
-			elif (msg.text == tutor._4):
+				msg.reply(bot3._1)
+			elif (msg.text == bot2._2):
 				time.sleep(self.delay)
-				msg.reply(bot1._2)
-			elif (msg.text == tutor._5):
+				msg.reply(bot3._2)
+			elif (msg.text == bot4._3):
 				time.sleep(self.delay)
-				msg.reply(bot1._3)
-			elif (msg.text == tutor._6):
+				msg.reply(bot3._3)
+			elif (msg.text == bot1._6):
 				time.sleep(self.delay)
-				msg.reply(bot1._4)
-			elif (msg.text == tutor._9):
+				msg.reply(bot3._4)
+			elif (msg.text == bot2._8):
 				time.sleep(self.delay)
-				msg.reply(bot1._5)
-			elif (msg.text == tutor._12):
+				msg.reply(bot3._5)
+			elif (msg.text == tutor._14):
 				time.sleep(self.delay)
-				msg.reply(bot1._6)
-			elif (msg.text == tutor._13):
+				msg.reply(bot3._6)
+				time.sleep(self.delay)
+				msg.reply(bot3._7)
+			elif (msg.text == bot4._4):
+				time.sleep(self.delay)
+				msg.reply(bot3._8)
+			elif (msg.text == bot2._13):
 				time.sleep(5)
-				msg.reply(bot1._7)
-			elif (msg.text == tutor._18):
+				msg.reply(bot3._9)
+			elif (msg.text == tutor._24):
 				time.sleep(self.delay)
-				msg.reply(bot1._8)
-			elif (msg.text == bot2._14):
-				time.sleep(5)
-				msg.reply(bot1._9)
-			elif (msg.text == tutor._25):
+				msg.reply(bot3._10)
+			elif (msg.text == bot5._3):
 				time.sleep(self.delay)
-				msg.reply(bot1._10)
-			elif (msg.text == tutor._27):
+				msg.reply(bot3._11)
+			elif (msg.text == bot2._17):
 				time.sleep(self.delay)
-				msg.reply(bot1._11)
-			elif (msg.text == bot5._6):
+				msg.reply(bot3._12)
+			elif (msg.text == tutor._33):
 				time.sleep(self.delay)
-				msg.reply(bot1._12)
-			elif (msg.text == bot3._18):
+				msg.reply(bot3._13)
+			elif (msg.text == bot2._19):
 				time.sleep(self.delay)
-				msg.reply(bot1._13)
-			elif (msg.text == bot2._23):
+				msg.reply(bot3._14)
+			elif (msg.text == bot5._7):
 				time.sleep(self.delay)
-				msg.reply(bot1._14)
-			elif (msg.text == tutor._35):
+				msg.reply(bot3._15)
+			elif (msg.text == bot2._21):
 				time.sleep(self.delay)
-				msg.reply(bot1._15)
+				msg.reply(bot3._16)
+			elif (msg.text == bot5._8):
+				time.sleep(self.delay)
+				msg.reply(bot3._17)
+			elif (msg.text == bot2._22):
+				time.sleep(self.delay)
+				msg.reply(bot3._18)
+			elif (msg.text == bot4._12):
+				time.sleep(self.delay)
+				msg.reply(bot3._19)
+			elif (msg.text == bot4._13):
+				time.sleep(self.delay)
+				msg.reply(bot3._20)
+			elif (msg.text == bot4._17):
+				time.sleep(self.delay)
+				msg.reply(bot3._21)
 		
 		self.main()
 

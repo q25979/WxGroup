@@ -15,6 +15,7 @@ class Bot_6:
 	# 主函数
 	def main(self):
 		print "\n============================"
+		print u"身份：机器人 己"
 		print u"回复数字实现对应功能："
 		print u"1.登录"
 		print u"2.停止系统"
@@ -34,7 +35,7 @@ class Bot_6:
 	# 登录微信
 	def login(self):
 		print u"正在下载二维码，请等待..."
-		path = "bot1.png"
+		path = "bot6.png"
 		self.bot = Bot(
 				cache_path=None, console_qr=False, qr_path=path
 			)
@@ -43,51 +44,11 @@ class Bot_6:
 		# 监听群信息
 		@self.bot.register(Group)
 		def reply_msg(msg):
-			if (msg.text == tutor._1):
+			if (msg.text == bot4._11):
 				time.sleep(self.delay)
-				msg.reply(bot1._1)
-			elif (msg.text == tutor._4):
+				msg.reply(bot6._1)
 				time.sleep(self.delay)
-				msg.reply(bot1._2)
-			elif (msg.text == tutor._5):
-				time.sleep(self.delay)
-				msg.reply(bot1._3)
-			elif (msg.text == tutor._6):
-				time.sleep(self.delay)
-				msg.reply(bot1._4)
-			elif (msg.text == tutor._9):
-				time.sleep(self.delay)
-				msg.reply(bot1._5)
-			elif (msg.text == tutor._12):
-				time.sleep(self.delay)
-				msg.reply(bot1._6)
-			elif (msg.text == tutor._13):
-				time.sleep(5)
-				msg.reply(bot1._7)
-			elif (msg.text == tutor._18):
-				time.sleep(self.delay)
-				msg.reply(bot1._8)
-			elif (msg.text == bot2._14):
-				time.sleep(5)
-				msg.reply(bot1._9)
-			elif (msg.text == tutor._25):
-				time.sleep(self.delay)
-				msg.reply(bot1._10)
-			elif (msg.text == tutor._27):
-				time.sleep(self.delay)
-				msg.reply(bot1._11)
-			elif (msg.text == bot5._6):
-				time.sleep(self.delay)
-				msg.reply(bot1._12)
-			elif (msg.text == bot3._18):
-				time.sleep(self.delay)
-				msg.reply(bot1._13)
-			elif (msg.text == bot2._23):
-				time.sleep(self.delay)
-				msg.reply(bot1._14)
-			elif (msg.text == tutor._35):
-				time.sleep(self.delay)
-				msg.reply(bot1._15)
+				msg.reply(bot6._2)
 		
 		self.main()
 
