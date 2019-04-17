@@ -1,4 +1,3 @@
-chcp 65001
 @echo off
 color Fd
 cls
@@ -10,17 +9,17 @@ goto:eof
 :mainFunc
 	cls
 	echo ==================================
-	echo = å¾®ä¿¡åµç¾¤ç³»ç»Ÿ         
-	echo = 1.å…¨éƒ¨å¼€å¯-
-	echo = 2.å¯¼å¸ˆå¼€å¯-
-	echo = 3.æœºå™¨äººç”²å¼€å¯-
-	echo = 4.æœºå™¨äººä¹™å¼€å¯-
-	echo = 5.æœºå™¨äººä¸™å¼€å¯-
-	echo = 6.æœºå™¨äººä¸å¼€å¯-
-	echo = 7.æœºå™¨äººæˆŠå¼€å¯-
-	echo = 8.æœºå™¨äººå·±å¼€å¯-
+	echo = Î¢ÐÅ³³ÈºÏµÍ³         
+	echo = 1.È«²¿¿ªÆô-
+	echo = 2.µ¼Ê¦¿ªÆô-
+	echo = 3.»úÆ÷ÈË¼×¿ªÆô-
+	echo = 4.»úÆ÷ÈËÒÒ¿ªÆô-
+	echo = 5.»úÆ÷ÈË±û¿ªÆô-
+	echo = 6.»úÆ÷ÈË¶¡¿ªÆô-
+	echo = 7.»úÆ÷ÈËÎì¿ªÆô-
+	echo = 8.»úÆ÷ÈË¼º¿ªÆô-
 	echo ==================================
-	set /p val=è¯·è¾“å…¥æ•°å­—å¼€å¯å¯¹åº”åŠŸèƒ½:
+	set /p val=ÇëÊäÈëÊý×Ö¿ªÆô¶ÔÓ¦¹¦ÄÜ:
 	if %1==%val% call:allStart
 	if %2==%val% call:tutorStart
 	if %3==%val% call:bot1Start
@@ -32,62 +31,62 @@ goto:eof
 	goto:eof
 
 :allStart
-	echo ç³»ç»Ÿå¯åŠ¨ä¸­...
-	start "" cmd /c "title å¯¼å¸ˆæœºå™¨äºº&python tutor.py"
-	echo å¯¼å¸ˆæœºå™¨äººå¯åŠ¨æˆåŠŸï¼
-	start "" cmd /c "title æœºå™¨äººç”²&python bot_1.py"
-	echo æœºå™¨äººç”²å¯åŠ¨æˆåŠŸ!
-	start "" cmd /c "title æœºå™¨äººä¹™&python bot_2.py"
-	echo æœºå™¨äººä¹™å¯åŠ¨æˆåŠŸ!
-	start "" cmd /c "title æœºå™¨äººä¸™&python bot_3.py"
-	echo æœºå™¨äººä¸™å¯åŠ¨æˆåŠŸ!
-	start "" cmd /c "title æœºå™¨äººä¸&python bot_4.py"
-	echo æœºå™¨äººä¸å¯åŠ¨æˆåŠŸ!
-	start "" cmd /c "title æœºå™¨äººæˆŠ&python bot_5.py"
-	echo æœºå™¨äººæˆŠå¯åŠ¨æˆåŠŸ!
-	start "" cmd /c "title æœºå™¨äººå·±&python bot_6.py"
-	echo æœºå™¨äººå·±å¯åŠ¨æˆåŠŸ!
-	set /p go=å›žå¤ä»»æ„ç»§ç»­:
+	echo ÏµÍ³Æô¶¯ÖÐ...
+	start "" cmd /c "title µ¼Ê¦»úÆ÷ÈË&python tutor.py"
+	echo µ¼Ê¦»úÆ÷ÈËÆô¶¯³É¹¦£¡
+	start "" cmd /c "title »úÆ÷ÈË¼×&python bot_1.py"
+	echo »úÆ÷ÈË¼×Æô¶¯³É¹¦!
+	start "" cmd /c "title »úÆ÷ÈËÒÒ&python bot_2.py"
+	echo »úÆ÷ÈËÒÒÆô¶¯³É¹¦!
+	start "" cmd /c "title »úÆ÷ÈË±û&python bot_3.py"
+	echo »úÆ÷ÈË±ûÆô¶¯³É¹¦!
+	start "" cmd /c "title »úÆ÷ÈË¶¡&python bot_4.py"
+	echo »úÆ÷ÈË¶¡Æô¶¯³É¹¦!
+	start "" cmd /c "title »úÆ÷ÈËÎì&python bot_5.py"
+	echo »úÆ÷ÈËÎìÆô¶¯³É¹¦!
+	start "" cmd /c "title »úÆ÷ÈË¼º&python bot_6.py"
+	echo »úÆ÷ÈË¼ºÆô¶¯³É¹¦!
+	set /p go=»Ø¸´ÈÎÒâ¼ÌÐø:
 	call:mainFunc 1,2,3,4,5,6,7,8
 
 :tutorStart
-	start "" cmd /c "title å¯¼å¸ˆæœºå™¨äºº&python tutor.py"
-	echo å¯¼å¸ˆæœºå™¨äººå¯åŠ¨æˆåŠŸ!
-	set /p go=å›žå¤ä»»æ„ç»§ç»­:
+	start "" cmd /c "title µ¼Ê¦»úÆ÷ÈË&python tutor.py"
+	echo µ¼Ê¦»úÆ÷ÈËÆô¶¯³É¹¦!
+	set /p go=»Ø¸´ÈÎÒâ¼ÌÐø:
 	call:mainFunc 1,2,3,4,5,6,7,8
 
 :bot1Start
-	start "" cmd /c "title æœºå™¨äººç”²&python bot_1.py"
-	echo æœºå™¨äººç”²å¯åŠ¨æˆåŠŸ!
-	set /p go=å›žå¤ä»»æ„ç»§ç»­:
+	start "" cmd /c "title »úÆ÷ÈË¼×&python bot_1.py"
+	echo »úÆ÷ÈË¼×Æô¶¯³É¹¦!
+	set /p go=»Ø¸´ÈÎÒâ¼ÌÐø:
 	call:mainFunc 1,2,3,4,5,6,7,8
 
 :bot2Start
-	start "" cmd /c "title æœºå™¨äººä¹™&python bot_2.py"
-	echo æœºå™¨äººä¹™å¯åŠ¨æˆåŠŸ!
-	set /p go=å›žå¤ä»»æ„ç»§ç»­:
+	start "" cmd /c "title »úÆ÷ÈËÒÒ&python bot_2.py"
+	echo »úÆ÷ÈËÒÒÆô¶¯³É¹¦!
+	set /p go=»Ø¸´ÈÎÒâ¼ÌÐø:
 	call:mainFunc 1,2,3,4,5,6,7,8
 
 :bot3Start
-	start "" cmd /c "title æœºå™¨äººä¸™&python bot_3.py"
-	echo æœºå™¨äººä¸™å¯åŠ¨æˆåŠŸ!
-	set /p go=å›žå¤ä»»æ„ç»§ç»­:
+	start "" cmd /c "title »úÆ÷ÈË±û&python bot_3.py"
+	echo »úÆ÷ÈË±ûÆô¶¯³É¹¦!
+	set /p go=»Ø¸´ÈÎÒâ¼ÌÐø:
 	call:mainFunc 1,2,3,4,5,6,7,8
 
 :bot4Start
-	start "" cmd /c "title æœºå™¨äººä¸&python bot_4.py"
-	echo æœºå™¨äººä¸å¯åŠ¨æˆåŠŸ!
-	set /p go=å›žå¤ä»»æ„ç»§ç»­:
+	start "" cmd /c "title »úÆ÷ÈË¶¡&python bot_4.py"
+	echo »úÆ÷ÈË¶¡Æô¶¯³É¹¦!
+	set /p go=»Ø¸´ÈÎÒâ¼ÌÐø:
 	call:mainFunc 1,2,3,4,5,6,7,8
 
 :bot5Start
-	start "" cmd /c "title æœºå™¨äººæˆŠ&python bot_5.py"
-	echo æœºå™¨äººæˆŠå¯åŠ¨æˆåŠŸ!
-	set /p go=å›žå¤ä»»æ„ç»§ç»­:
+	start "" cmd /c "title »úÆ÷ÈËÎì&python bot_5.py"
+	echo »úÆ÷ÈËÎìÆô¶¯³É¹¦!
+	set /p go=»Ø¸´ÈÎÒâ¼ÌÐø:
 	call:mainFunc 1,2,3,4,5,6,7,8
 
 :bot6Start
-	start "" cmd /c "title æœºå™¨äººå·±&python bot_6.py"
-	echo æœºå™¨äººå·±å¯åŠ¨æˆåŠŸ!
-	set /p go=å›žå¤ä»»æ„ç»§ç»­:
+	start "" cmd /c "title »úÆ÷ÈË¼º&python bot_6.py"
+	echo »úÆ÷ÈË¼ºÆô¶¯³É¹¦!
+	set /p go=»Ø¸´ÈÎÒâ¼ÌÐø:
 	call:mainFunc 1,2,3,4,5,6,7,8
