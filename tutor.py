@@ -2,6 +2,7 @@
 from wxpy import *
 from term import *
 import time
+import os
 
 
 """
@@ -9,7 +10,8 @@ import time
 """
 class Tutor:
 	def __init__(self):
-		self.delay = 2	# 2秒延时
+		self.delay = 10
+		self.imgpath = "./img/qrcode.jpg"
 
 
 	# 主函数
@@ -21,7 +23,7 @@ class Tutor:
 		print u"2.获取所有群"
 		print u"3.开始启动"
 		print u"4.停止系统"
-		print u"5.退出系统"
+		print u"5.检查二维码是否存在"
 		print "============================"
 		itext = "请输入数字："
 		ifunc = input(itext.decode("UTF-8").encode("GBK"))
@@ -35,7 +37,7 @@ class Tutor:
 		elif ifunc == 4:
 			self.stop()
 		elif ifunc == 5:
-			self.exit()
+			self.is_qrcode()
 		else:
 			print u"输入错误请重新输入"
 			self.main()
@@ -54,100 +56,114 @@ class Tutor:
 		@self.bot.register(Group)
 		def reply_msg(msg):
 			if (msg.text == bot4._1):
-				time.sleep(2)
+				time.sleep(10)
 				msg.reply(tutor._2)
 			elif (msg.text == bot4._2):
-				time.sleep(5)
+				time.sleep(self.delay)
 				msg.reply(tutor._3)
 			elif (msg.text == bot2._4):
-				time.sleep(2)
+				time.sleep(self.delay)
 				msg.reply(tutor._4)
 			elif (msg.text == bot1._2):
-				time.sleep(3)
+				time.sleep(self.delay)
 				msg.reply(tutor._5)
 			elif (msg.text == bot1._3):
-				time.sleep(10)
+				time.sleep(self.delay)
 				msg.reply(tutor._6)
 			elif (msg.text == bot2._5):
-				time.sleep(2)
+				time.sleep(self.delay)
+				msg.reply_image(self.imgpath)	# 推送名片
+				time.sleep(3)
 				msg.reply(tutor._7)
-				time.sleep(4)
+				time.sleep(self.delay)
 				msg.reply(tutor._8)
 			elif (msg.text == bot2._6):
-				time.sleep(3)
+				time.sleep(self.delay)
 				msg.reply(tutor._9)
 			elif (msg.text == bot1._5):
-				time.sleep(3)
+				time.sleep(self.delay)
 				msg.reply(tutor._10)
-				time.sleep(5)
+				time.sleep(self.delay)
 				msg.reply(tutor._11)
 			elif (msg.text == bot3._3):
-				time.sleep(5)
+				time.sleep(self.delay)
 				msg.reply(tutor._12)
+				time.sleep(3)
+				msg.reply_image(self.imgpath)	# 推送名片
 			elif (msg.text == bot3._4):
-				time.sleep(8)
+				time.sleep(self.delay)
 				msg.reply(tutor._13)
 			elif (msg.text == bot3._5):
-				time.sleep(5)
+				time.sleep(self.delay)
 				msg.reply(tutor._14)
 			elif (msg.text == bot4._5):
-				time.sleep(5)
+				time.sleep(self.delay)
 				msg.reply(tutor._15)
 			elif (msg.text == bot2._9):
-				time.sleep(10)
+				time.sleep(self.delay)
 				msg.reply(tutor._16)
+				time.sleep(3)
+				msg.reply_image(self.imgpath)	# 推送名片
 			elif (msg.text == bot4._6):
-				time.sleep(2)
+				time.sleep(self.delay)
 				msg.reply(tutor._17)
 			elif (msg.text == bot4._7):
-				time.sleep(2)
+				time.sleep(self.delay)
 				msg.reply(tutor._18)
 			elif (msg.text == bot1._8):
-				time.sleep(2)
+				time.sleep(self.delay)
 				msg.reply(tutor._19)
 			elif (msg.text == bot2._10):
-				time.sleep(6)
+				time.sleep(self.delay)
 				msg.reply(tutor._20)
 			elif (msg.text == bot2._11):
-				time.sleep(1)
+				time.sleep(self.delay)
 				msg.reply(tutor._21)
-				time.sleep(1.5)
+				time.sleep(3)
+				msg.reply_image(self.imgpath)	# 推送名片
+				time.sleep(self.delay)
 				msg.reply(tutor._22)
 			elif (msg.text == bot1._9):
-				time.sleep(3)
+				time.sleep(self.delay)
 				msg.reply(tutor._23)
-				time.sleep(1)
+				time.sleep(self.delay)
 				msg.reply(tutor._24)
-			elif (msg.text == bot3._10):
 				time.sleep(3)
+				msg.reply_image(self.imgpath)	# 推送名片
+			elif (msg.text == bot3._10):
+				time.sleep(self.delay)
 				msg.reply(tutor._25)
 			elif (msg.text == bot1._10):
-				time.sleep(1.5)
+				time.sleep(self.delay)
 				msg.reply(tutor._26)
-				time.sleep(2)
+				time.sleep(self.delay)
 				msg.reply(tutor._27)
 			elif (msg.text == bot1._11):
-				time.sleep(1)
+				time.sleep(self.delay)
 				msg.reply(tutor._28)
 			elif (msg.text == bot4._10):
-				time.sleep(2)
+				time.sleep(self.delay)
 				msg.reply(tutor._29)
 			elif (msg.text == bot2._15):
-				time.sleep(2)
+				time.sleep(self.delay)
 				msg.reply(tutor._30)
-				time.sleep(6)
+				time.sleep(self.delay)
 				msg.reply(tutor._31)
+				time.sleep(3)
+				msg.reply_image(self.imgpath)	# 推送名片
 			elif (msg.text == bot2._16):
-				time.sleep(2)
+				time.sleep(self.delay)
 				msg.reply(tutor._32)
 			elif (msg.text == bot5._5):
-				time.sleep(8)
+				time.sleep(self.delay)
 				msg.reply(tutor._33)
 			elif (msg.text == bot3._13):
-				time.sleep(8)
+				time.sleep(self.delay)
 				msg.reply(tutor._34)
-			elif (msg.text == bot4._15):
 				time.sleep(3)
+				msg.reply_image(self.imgpath)	# 推送名片
+			elif (msg.text == bot4._15):
+				time.sleep(self.delay)
 				msg.reply(tutor._35)
 		
 		self.main()
@@ -200,8 +216,11 @@ class Tutor:
 			# 搜索聊天对象
 			mygroup = self.bot.groups().search(li)
 			mygroup[0].send(tutor._1)
+			time.sleep(1)
+			mygroup[0].send_image(self.imgpath)
 			print li + u"发送成功！"
-			time.sleep(0.5)
+			# 时间间隔 多久发一个群
+			time.sleep(4)
 		self.main()
 
 
@@ -213,9 +232,14 @@ class Tutor:
 
 
 	# 退出系统
-	def exit(self):
-		self.bot.logout()
-		print u"退出系统成功"
+	def is_qrcode(self):
+		print u"二维码检测中..."
+		if os.path.exists(self.imgpath):
+			print u"导师二维码已存在。"
+		else:
+			print u"导师二维码不存在，请保存在%s" % (self.imgpath)
+
+		self.main()
 
 
 tutor = TermTutor()

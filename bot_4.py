@@ -9,7 +9,10 @@ import time
 """
 class Bot_4:
 	def __init__(self):
-		self.delay = 3
+		self.delay = 20
+		self.imgwin = "./img/_4zj.jpg"
+		self.imgprofit = "./img/_4yl.jpg"
+		self.imgprofit2 = "./img/_4yl2.jpg"
 
 
 	# 主函数
@@ -70,16 +73,22 @@ class Bot_4:
 				msg.reply(bot4._8)
 			elif (msg.text == bot2._12):
 				time.sleep(5)
+				msg.reply_image(self.imgwin)	#  中奖截图
+				time.sleep(5)
 				msg.reply(bot4._9)
 			elif (msg.text == tutor._28):
 				time.sleep(self.delay)
 				msg.reply(bot4._10)
+				time.sleep(3)
+				msg.reply_image(self.imgprofit)	#  盈利截图
 			elif (msg.text == bot1._14):
 				time.sleep(self.delay)
 				msg.reply(bot4._11)
 			elif (msg.text == bot2._24):
 				time.sleep(self.delay)
 				msg.reply(bot4._12)
+				time.sleep(3)
+				msg.reply_image(self.imgprofit2)	#  盈利截图2
 			elif (msg.text == bot2._25):
 				time.sleep(self.delay)
 				msg.reply(bot4._13)

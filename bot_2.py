@@ -9,7 +9,11 @@ import time
 """
 class Bot_2:
 	def __init__(self):
-		self.delay = 3
+		self.delay = 16
+		self.imgpath = "./img/qrcode.jpg"
+		self.imgtz = "./img/_2tz.jpg"
+		self.imgyl = "./img/_2yl.jpg"
+		self.imgyl2 = "./img/_2yl2.jpg"
 
 
 	# 主函数
@@ -86,7 +90,9 @@ class Bot_2:
 				time.sleep(self.delay)
 				msg.reply(bot2._14)
 			elif (msg.text == bot5._1):
-				time.sleep(self.delay)
+				time.sleep(3)
+				msg.reply_image(self.imgpath)	#  导师二维码
+				time.sleep(3)
 				msg.reply(bot2._15)
 			elif (msg.text == bot5._2):
 				time.sleep(self.delay)
@@ -114,9 +120,13 @@ class Bot_2:
 				msg.reply(bot2._23)
 			elif (msg.text == bot6._2):
 				time.sleep(self.delay)
+				msg.reply_image(self.imgtz)	#  投注截图
+				time.sleep(3)
 				msg.reply(bot2._24)
 			elif (msg.text == bot3._19):
 				time.sleep(self.delay)
+				msg.reply_image(self.imgyl)	#  盈利截图
+				time.sleep(3)
 				msg.reply(bot2._25)
 			elif (msg.text == bot3._20):
 				time.sleep(self.delay)
@@ -127,6 +137,8 @@ class Bot_2:
 			elif (msg.text == bot4._18):
 				time.sleep(self.delay)
 				msg.reply(bot2._28)
+				time.sleep(3)
+				msg.reply_image(self.imgyl2)	#  盈利截图
 
 		self.main()
 

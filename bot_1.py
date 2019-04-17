@@ -9,7 +9,7 @@ import time
 """
 class Bot_1:
 	def __init__(self):
-		self.delay = 3
+		self.delay = 20
 
 
 	# 主函数
@@ -61,13 +61,13 @@ class Bot_1:
 				time.sleep(self.delay)
 				msg.reply(bot1._6)
 			elif (msg.text == tutor._13):
-				time.sleep(5)
+				time.sleep(self.delay)
 				msg.reply(bot1._7)
 			elif (msg.text == tutor._18):
 				time.sleep(self.delay)
 				msg.reply(bot1._8)
 			elif (msg.text == bot2._14):
-				time.sleep(5)
+				time.sleep(self.delay)
 				msg.reply(bot1._9)
 			elif (msg.text == tutor._25):
 				time.sleep(self.delay)

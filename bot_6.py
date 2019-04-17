@@ -9,7 +9,7 @@ import time
 """
 class Bot_6:
 	def __init__(self):
-		self.delay = 3
+		self.delay = 30
 
 
 	# 主函数
