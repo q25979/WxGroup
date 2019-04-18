@@ -12,6 +12,6 @@ setx /m PATH "%PATH%;C:\Python27;C:\Python27\Scripts"
 echo 环境变量配置成功!
 
 echo 正在安装微信机器人所需环境...
-pip install wxpy
+start "" cmd /c "pip install wxpy"
 
 pause

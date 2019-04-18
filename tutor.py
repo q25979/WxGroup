@@ -214,13 +214,17 @@ class Tutor:
 		groups = filter(None, lists.split("\n"))	# 群名称
 		for li in groups:
 			# 搜索聊天对象
-			mygroup = self.bot.groups().search(li)
-			mygroup[0].send(tutor._1)
-			time.sleep(1)
-			mygroup[0].send_image(self.imgpath)
-			print li + u"发送成功！"
+			groupli = unicode(li, 'utf8')
+			mygroup = self.bot.groups().search(groupli)
+			if mygroup:
+				mygroup[0].send(tutor._1)
+				time.sleep(1)
+				mygroup[0].send_image(self.imgpath)
+				print unicode(li, 'utf8') + u"发送成功！"
+			else:
+				print unicode(li, 'utf8') + u"发送失败！"
 			# 时间间隔 多久发一个群
-			time.sleep(4)
+			time.sleep(5)
 		self.main()
 
 
